@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import apiKeyd from "../../apikey";
-
+import REACT_APP_API from "/.env";
 const ImageUploader = () => {
   const [galleryImage, setGalleryImage] = useState(null);
   const [probeImage, setProbeImage] = useState(null);
@@ -20,7 +19,7 @@ const ImageUploader = () => {
   // Función para enviar la solicitud POST con las imágenes
   const postDataWithImages = async () => {
     const url = "https://us.opencv.fr/compare";
-    const apiKey = apiKeyd;
+    const apiKey = REACT_APP_API;
 
     try {
       // Convertir las imágenes a base64
