@@ -19,7 +19,7 @@ const ImageUploader = () => {
   // Función para enviar la solicitud POST con las imágenes
   const postDataWithImages = async () => {
     const url = "https://us.opencv.fr/compare";
-    const apiKey = REACT_APP_API;
+    const apiKey = process.env.REACT_APP_API;
 
     try {
       // Convertir las imágenes a base64
